@@ -8,8 +8,6 @@ const write = async () => {
     const output = fs.createWriteStream(`${FILE_DEST}/${FILE_NAME}`);
 
     process.stdin.pipe(output);
-
-    process.stdin.resume();
 };
 
 await write();
